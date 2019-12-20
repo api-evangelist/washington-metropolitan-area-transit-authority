@@ -1,0 +1,47 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "Real-Time Rail Predictions",
+        "description": "Real-time rail prediction methods.",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsapi.wmata.com\/StationPrediction.svc"
+    ],
+    "paths": {
+        "\/json\/GetPrediction\/{StationCodes}": {
+            "get": {
+                "summary": "JSON - Next Trains",
+                "description": "Description\r\n\r\nReturns next train arrival information for one or more stations. Will return\r\nan empty set of results when no predictions are available. Use All for the StationCodes parameter to return predictions for\r\nall stations.\r\n\r\nFor terminal stations (e.g.: Greenbelt, Shady Grove, etc.), predictions may\r\nbe displayed twice.\r\n\r\nSome stations have two platforms (e.g.: Gallery Place, Fort Totten, L'Enfant\r\nPlaza, and Metro Center). To retrieve complete predictions for these stations,\r\nbe sure",
+                "operationId": "GetJsonGetpredictionStationcodes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "StationCodes",
+                        "in": "path",
+                        "description": "Comma-separated list of station codes.  For all predictions, use \"All\"."
+                    }
+                ]
+            }
+        },
+        "\/GetPrediction\/{StationCodes}": {
+            "get": {
+                "summary": "XML - Next Trains",
+                "description": "Description\r\n\r\nReturns next train arrival information for one or more stations. Will return\r\nan empty set of results when no predictions are available. Use All for the StationCodes parameter to return predictions for\r\nall stations.\r\n\r\nFor terminal stations (e.g.: Greenbelt, Shady Grove, etc.), predictions may\r\nbe displayed twice.\r\n\r\nSome stations have two platforms (e.g.: Gallery Place, Fort Totten, L'Enfant\r\nPlaza, and Metro Center). To retrieve complete predictions for these stations,\r\nbe sure",
+                "operationId": "GetGetpredictionStationcodes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "StationCodes",
+                        "in": "path",
+                        "description": "Comma-separated list of station codes.  For all predictions, use \"All\"."
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
