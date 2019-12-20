@@ -1,0 +1,125 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0",
+        "title": "Incidents",
+        "description": "Rail, bus, and elevator disruptions\/outages.",
+        "termsOfService": "http:\/\/exmple.com\/license\/"
+    },
+    "servers": [
+        "http:\/\/api.wmata.com\/Incidents.svc"
+    ],
+    "paths": {
+        "\/BusIncidents": {
+            "get": {
+                "summary": "XML - Bus Incidents",
+                "description": "<h4 class=\"text-primary\">Description<\/h4>\r\n\r\n<p>Returns a set of reported bus incidents\/delays for a given Route. Omit the\r\nRoute to return all reported items.<\/p>\r\n\r\n<p>Note that the Route parameter accepts only base route names and no\r\nvariations, i.e.: use 10A instead of 10Av1 and 10Av2.<\/p>\r\n\r\n<p>Bus incidents\/delays are refreshed once every 20 to 30 seconds approximately.<\/p>\r\n\r\n<h4 class=\"text-primary\">Response Elements<\/h4>\r\n\r\n<table class=\"table table-condensed table-hover\">\r\n<thead>\r\n<t",
+                "operationId": "54763641281d830c946a3d78",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Route",
+                        "in": "query",
+                        "description": "Bus route.  Use full route code, i.e.: C2 instead of C2v1, C2v2, etc."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Default response code."
+                    }
+                }
+            }
+        },
+        "\/ElevatorIncidents": {
+            "get": {
+                "summary": "XML - Elevator\/Escalator Outages",
+                "description": "<h4 class=\"text-primary\">Description<\/h4>\r\n\r\n<p>Returns a list of <em>reported<\/em> elevator and escalator outages at a\r\ngiven station. Omit the StationCode parameter to return all reported\r\noutages.<\/p>\r\n\r\n<p>Note that for stations with multiple platforms and therefore StationCodes\r\n(e.g.: Metro Center, L'Enfant Plaza, etc.), a distinct call is required for\r\neach StationCode.<\/p>\r\n\r\n<p>Elevator and escalator outages are refreshed once every 20 to 30 seconds approximately.<\/p>\r\n\r\n<h4 class=\"text",
+                "operationId": "54763641281d830c946a3d79",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "StationCode",
+                        "in": "query",
+                        "description": "Two-letter station code.  Use the Station List method to return a list of all station codes."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Default response code."
+                    }
+                }
+            }
+        },
+        "\/Incidents": {
+            "get": {
+                "summary": "XML - Rail Incidents",
+                "description": "<h4 class=\"text-primary\">Description<\/h4>\r\n\r\n<p>Returns reported rail incidents (significant disruptions and delays to\r\nnormal service). The data is identical to WMATA's <a href=\r\n\"http:\/\/www.metroalerts.info\/rss.aspx?rs\">Metrorail Service Status\r\nfeed<\/a>.<\/p>\r\n\r\n<p>Rail incidents are refreshed once every 20 to 30 seconds approximately.<\/p>\r\n\r\n<h4 class=\"text-primary\">Response Elements<\/h4>\r\n\r\n<table class=\"table table-condensed table-hover\">\r\n<thead>\r\n<tr>\r\n<th class=\"col-md-3\">Element<\/th>\r\n\r",
+                "operationId": "54763641281d830c946a3d7a",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Default response code."
+                    }
+                }
+            }
+        },
+        "\/json\/BusIncidents": {
+            "get": {
+                "summary": "JSON - Bus Incidents",
+                "description": "<h4 class=\"text-primary\">Description<\/h4>\r\n\r\n<p>Returns a set of reported bus incidents\/delays for a given Route. Omit the\r\nRoute to return all reported items.<\/p>\r\n\r\n<p>Note that the Route parameter accepts only base route names and no\r\nvariations, i.e.: use 10A instead of 10Av1 and 10Av2.<\/p>\r\n\r\n<p>Bus incidents\/delays are refreshed once every 20 to 30 seconds approximately.<\/p>\r\n\r\n<h4 class=\"text-primary\">Response Elements<\/h4>\r\n\r\n<table class=\"table table-condensed table-hover\">\r\n<thead>\r\n<t",
+                "operationId": "54763641281d830c946a3d75",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Route",
+                        "in": "query",
+                        "description": "Bus route.  Use full route code, i.e.: C2 instead of C2v1, C2v2, etc."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Default response code."
+                    }
+                }
+            }
+        },
+        "\/json\/ElevatorIncidents": {
+            "get": {
+                "summary": "JSON - Elevator\/Escalator Outages",
+                "description": "<h4 class=\"text-primary\">Description<\/h4>\r\n\r\n<p>Returns a list of <em>reported<\/em> elevator and escalator outages at a\r\ngiven station. Omit the StationCode parameter to return all reported\r\noutages.<\/p>\r\n\r\n<p>Note that for stations with multiple platforms and therefore StationCodes\r\n(e.g.: Metro Center, L'Enfant Plaza, etc.), a distinct call is required for\r\neach StationCode.<\/p>\r\n\r\n<p>Elevator and escalator outages are refreshed once every 20 to 30 seconds approximately.<\/p>\r\n\r\n<h4 class=\"text",
+                "operationId": "54763641281d830c946a3d76",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "StationCode",
+                        "in": "query",
+                        "description": "Two-letter station code.  Use the Station List method to return a list of all station codes."
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Default response code."
+                    }
+                }
+            }
+        },
+        "\/json\/Incidents": {
+            "get": {
+                "summary": "JSON - Rail Incidents",
+                "description": "<h4 class=\"text-primary\">Description<\/h4>\r\n\r\n<p>Returns reported rail incidents (significant disruptions and delays to\r\nnormal service). The data is identical to WMATA's <a href=\r\n\"http:\/\/www.metroalerts.info\/rss.aspx?rs\">Metrorail Service Status\r\nfeed<\/a>.<\/p>\r\n\r\n<p>Rail incidents are refreshed once every 20 to 30 seconds approximately.<\/p>\r\n\r\n<h4 class=\"text-primary\">Response Elements<\/h4>\r\n\r\n<table class=\"table table-condensed table-hover\">\r\n<thead>\r\n<tr>\r\n<th class=\"col-md-3\">Element<\/th>\r\n\r",
+                "operationId": "54763641281d830c946a3d77",
+                "deprecated": 0,
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "Default response code."
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
