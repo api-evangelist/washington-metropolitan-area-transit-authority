@@ -1,0 +1,75 @@
+{
+    "id": "0fa52b1b1a4ed54fb3586d7af5aa7fcc",
+    "name": "Real-Time Rail Predictions",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "65e6174cb4f67587ba71d2447ad36e9a",
+            "name": "JSON - Next Trains",
+            "url": "httpsapi.wmata.com\/StationPrediction.svc\/json\/GetPrediction\/{StationCodes}",
+            "description": "Description\r\n\r\nReturns next train arrival information for one or more stations. Will return\r\nan empty set of results when no predictions are available. Use All for the StationCodes parameter to return predictions for\r\nall stations.\r\n\r\nFor terminal stations (e.g.: Greenbelt, Shady Grove, etc.), predictions may\r\nbe displayed twice.\r\n\r\nSome stations have two platforms (e.g.: Gallery Place, Fort Totten, L'Enfant\r\nPlaza, and Metro Center). To retrieve complete predictions for these stations,\r\nbe sure",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "StationCodes",
+                    "description": "Comma-separated list of station codes.  For all predictions, use \"All\".",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0fa52b1b1a4ed54fb3586d7af5aa7fcc",
+            "rawModeData": ""
+        },
+        {
+            "id": "037c4f306deb4579495a9ceac1f28e04",
+            "name": "XML - Next Trains",
+            "url": "httpsapi.wmata.com\/StationPrediction.svc\/GetPrediction\/{StationCodes}",
+            "description": "Description\r\n\r\nReturns next train arrival information for one or more stations. Will return\r\nan empty set of results when no predictions are available. Use All for the StationCodes parameter to return predictions for\r\nall stations.\r\n\r\nFor terminal stations (e.g.: Greenbelt, Shady Grove, etc.), predictions may\r\nbe displayed twice.\r\n\r\nSome stations have two platforms (e.g.: Gallery Place, Fort Totten, L'Enfant\r\nPlaza, and Metro Center). To retrieve complete predictions for these stations,\r\nbe sure",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "StationCodes",
+                    "description": "Comma-separated list of station codes.  For all predictions, use \"All\".",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "0fa52b1b1a4ed54fb3586d7af5aa7fcc",
+            "rawModeData": ""
+        }
+    ]
+}
