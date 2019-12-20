@@ -1,0 +1,62 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "Train Positions",
+        "description": "Real-time train positions and support methods.",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsapi.wmata.com\/TrainPositions"
+    ],
+    "paths": {
+        "\/TrainPositions": {
+            "get": {
+                "summary": "Live Train Positions",
+                "description": "Description\n\nReturns uniquely identifiable trains in service and what track circuits they currently occupy. Will return an empty set of results when no positions are available.\n\nData is refreshed once every 7-10 seconds.\nPlease refer to this page for additional details.\n\nResponse Elements\n\n\n\n\nElement\n\nDescription\n\n\n\n\n\nTrainPositions\n\n\nArray containing train position information (TrainPosition).\n\n\n\n\n\n\nTrainPosition Elements\n\n\n\n\n\nCarCount\n\nNumber of cars.  Can sometimes be 0 when there is no data ",
+                "operationId": "GetTrainpositions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "contentType",
+                        "in": "query",
+                        "description": "Returns response in the specified format.  Currently supported formats include <b>json<\/b> and <b>xml<\/b>."
+                    }
+                ]
+            }
+        },
+        "\/StandardRoutes": {
+            "get": {
+                "summary": "Standard Routes",
+                "description": "Description\r\n\r\nReturns an ordered list of mostly revenue (and some lead) track circuits, arranged by line and track number.  This data does not change frequently and should be cached for a reasonable amount of time.\r\nPlease refer to this page for additional details.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nStandardRoutes\r\n\r\n\r\nArray containing revenue line information (StandardRoute).\r\n\r\n\r\n\r\n\r\n\r\n\r\nStandardRoute Elements\r\n\r\n\r\n\r\n\r\n\r\nLineCode\r\n\r\nAbbreviation for the revenue li",
+                "operationId": "GetStandardroutes",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "contentType",
+                        "in": "query",
+                        "description": "Returns response in the specified format.  Currently supported formats include <b>json<\/b> and <b>xml<\/b>."
+                    }
+                ]
+            }
+        },
+        "\/TrackCircuits": {
+            "get": {
+                "summary": "Track Circuits",
+                "description": "Description\r\n\r\nReturns a list of all track circuits including those on pocket tracks and crossovers.  Each track circuit may include references to its right and left neighbors.\r\nPlease refer to this page for additional details.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nTrackCircuits\r\n\r\n\r\nArray containing track circuit information (TrackCircuit).\r\n\r\n\r\n\r\n\r\n\r\n\r\nTrackCircuit Elements\r\n\r\n\r\n\r\n\r\n\r\nCircuitId\r\n\r\nAn internal system-wide uniquely identifiable circuit number.\r\n\r\n\r\n\r\nNe",
+                "operationId": "GetTrackcircuits",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "contentType",
+                        "in": "query",
+                        "description": "Returns response in the specified format.  Currently supported formats include <b>json<\/b> and <b>xml<\/b>."
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
