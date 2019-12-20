@@ -1,0 +1,289 @@
+{
+    "name": "Washington Metropolitan Area Transit Authority",
+    "description": "Official feed of Metro\/WMATA, not monitored 24\/7. Report emergencies to Transit Police at (202) 962-2121. Service updates @metrorailinfo & @metrobusinfo.",
+    "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1214-washington-metropolitan-area-transit-authority.jpg",
+    "tags": [
+        "general data",
+        "have api",
+        "have swagger"
+    ],
+    "created": "2019-12-19",
+    "modified": "2019-12-19",
+    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/washington-metropolitan-area-transit-authority\/master\/apis.json",
+    "specificationVersion": "0.14",
+    "apis": [
+        {
+            "name": "WMATA Rail Station Information",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1214-washington-metropolitan-area-transit-authority.jpg",
+            "humanURL": "http:\/\/developer.wmata.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/wmata-rail-station-information.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/wmata-rail-station-information-openapi.json"
+                }
+            ]
+        },
+        {
+            "name": "Real-Time Rail Predictions",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1214-washington-metropolitan-area-transit-authority.jpg",
+            "humanURL": "http:\/\/developer.wmata.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/realtime-rail-predictions.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/realtime-rail-predictions-openapi.json"
+                }
+            ]
+        },
+        {
+            "name": "WMATA Incidents",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1214-washington-metropolitan-area-transit-authority.jpg",
+            "humanURL": "http:\/\/developer.wmata.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/wmata-incidents.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/wmata-incidents-openapi.json"
+                }
+            ]
+        },
+        {
+            "name": "Train Positions",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1214-washington-metropolitan-area-transit-authority.jpg",
+            "humanURL": "http:\/\/developer.wmata.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/train-positions.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/train-positions-openapi.json"
+                }
+            ]
+        },
+        {
+            "name": "Rail Station Information",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1214-washington-metropolitan-area-transit-authority.jpg",
+            "humanURL": "http:\/\/developer.wmata.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/rail-station-information.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/rail-station-information-openapi.json"
+                }
+            ]
+        },
+        {
+            "name": "Incidents",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1214-washington-metropolitan-area-transit-authority.jpg",
+            "humanURL": "http:\/\/developer.wmata.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/incidents.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/incidents-openapi.json"
+                }
+            ]
+        },
+        {
+            "name": "Real-Time Bus Predictions",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1214-washington-metropolitan-area-transit-authority.jpg",
+            "humanURL": "http:\/\/developer.wmata.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/realtime-bus-predictions.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/realtime-bus-predictions-openapi.json"
+                }
+            ]
+        },
+        {
+            "name": "Bus Route and Stop Methods",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1214-washington-metropolitan-area-transit-authority.jpg",
+            "humanURL": "http:\/\/developer.wmata.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/bus-route-and-stop-methods.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/bus-route-and-stop-methods-openapi.json"
+                }
+            ]
+        },
+        {
+            "name": "WMATA Real-Time Bus Predictions",
+            "description": null,
+            "image": "http:\/\/kinlane-productions.s3.amazonaws.com\/screen-capture-api\/1214-washington-metropolitan-area-transit-authority.jpg",
+            "humanURL": "http:\/\/developer.wmata.com",
+            "baseURL": "",
+            "tags": [],
+            "properties": [
+                {
+                    "type": "x-openapi",
+                    "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-evangelist-site\/company\/openapis\/wmata-realtime-bus-predictions.json"
+                },
+                {
+                    "type": "x-openapi",
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/wmata-realtime-bus-predictions-openapi.json"
+                }
+            ]
+        }
+    ],
+    "include": [],
+    "x-common": [
+        {
+            "type": "Base",
+            "url": "http:\/\/api.wmata.com\/"
+        },
+        {
+            "type": "Crunchbase",
+            "url": "https:\/\/crunchbase.com\/organization\/wmata"
+        },
+        {
+            "type": "Developers",
+            "url": "http:\/\/developer.wmata.com\/"
+        },
+        {
+            "type": "Email",
+            "url": "boardofdirectors@wmata.com"
+        },
+        {
+            "type": "Email",
+            "url": "metrotransit@wmata.com"
+        },
+        {
+            "type": "Email",
+            "url": "adaassist@wmata.com"
+        },
+        {
+            "type": "Email",
+            "url": "access@wmata.com"
+        },
+        {
+            "type": "Email",
+            "url": "cjachles@wmata.com"
+        },
+        {
+            "type": "Email",
+            "url": "writtentestimony@wmata.com"
+        },
+        {
+            "type": "Email",
+            "url": "speak@wmata.com"
+        },
+        {
+            "type": "Email",
+            "url": "SEBusMove@wmata.com"
+        },
+        {
+            "type": "Email",
+            "url": "PARP@wmata.com"
+        },
+        {
+            "type": "Email",
+            "url": "raccomments@wmata.com"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/1214-2019-09-04-07-14-29.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/1214-2019-09-04-12-18-34.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/1214-2019-09-04-02-40-11.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/1214-2019-09-04-04-34-24.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/1214-2019-09-04-04-34-52.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/1214-2019-09-04-04-35-14.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/1214-2019-09-04-04-36-10.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/1214-2019-09-04-04-36-38.json"
+        },
+        {
+            "type": "Swagger",
+            "url": "http:\/\/kinlane-productions.s3.amazonaws.com\/api-definitions\/swagger\/1214-2019-09-04-04-37-18.json"
+        },
+        {
+            "type": "Signup",
+            "url": "https:\/\/developer.wmata.com\/signup\/"
+        },
+        {
+            "type": "Twitter",
+            "url": "https:\/\/twitter.com\/wmata"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/wmata.com\/"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/wmata.com"
+        },
+        {
+            "type": "Website",
+            "url": "http:\/\/developer.wmata.com"
+        }
+    ]
+}
