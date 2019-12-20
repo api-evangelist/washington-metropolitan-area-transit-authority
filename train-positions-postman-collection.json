@@ -1,0 +1,106 @@
+{
+    "id": "e52e49b12756ddf442a761b6e057902d",
+    "name": "Train Positions",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "0cf83997d3ace0e814835e5366d6a672",
+            "name": "Live Train Positions",
+            "url": "httpsapi.wmata.com\/TrainPositions\/TrainPositions",
+            "description": "Description\n\nReturns uniquely identifiable trains in service and what track circuits they currently occupy. Will return an empty set of results when no positions are available.\n\nData is refreshed once every 7-10 seconds.\nPlease refer to this page for additional details.\n\nResponse Elements\n\n\n\n\nElement\n\nDescription\n\n\n\n\n\nTrainPositions\n\n\nArray containing train position information (TrainPosition).\n\n\n\n\n\n\nTrainPosition Elements\n\n\n\n\n\nCarCount\n\nNumber of cars.  Can sometimes be 0 when there is no data ",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "contentType",
+                    "description": "Returns response in the specified format.  Currently supported formats include <b>json<\/b> and <b>xml<\/b>.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e52e49b12756ddf442a761b6e057902d",
+            "rawModeData": ""
+        },
+        {
+            "id": "2a2330813a4214ec002478fbcec3bf89",
+            "name": "Standard Routes",
+            "url": "httpsapi.wmata.com\/TrainPositions\/StandardRoutes",
+            "description": "Description\r\n\r\nReturns an ordered list of mostly revenue (and some lead) track circuits, arranged by line and track number.  This data does not change frequently and should be cached for a reasonable amount of time.\r\nPlease refer to this page for additional details.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nStandardRoutes\r\n\r\n\r\nArray containing revenue line information (StandardRoute).\r\n\r\n\r\n\r\n\r\n\r\n\r\nStandardRoute Elements\r\n\r\n\r\n\r\n\r\n\r\nLineCode\r\n\r\nAbbreviation for the revenue li",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "contentType",
+                    "description": "Returns response in the specified format.  Currently supported formats include <b>json<\/b> and <b>xml<\/b>.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e52e49b12756ddf442a761b6e057902d",
+            "rawModeData": ""
+        },
+        {
+            "id": "1678472a7e0b7a050dd9630f504c496d",
+            "name": "Track Circuits",
+            "url": "httpsapi.wmata.com\/TrainPositions\/TrackCircuits",
+            "description": "Description\r\n\r\nReturns a list of all track circuits including those on pocket tracks and crossovers.  Each track circuit may include references to its right and left neighbors.\r\nPlease refer to this page for additional details.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nTrackCircuits\r\n\r\n\r\nArray containing track circuit information (TrackCircuit).\r\n\r\n\r\n\r\n\r\n\r\n\r\nTrackCircuit Elements\r\n\r\n\r\n\r\n\r\n\r\nCircuitId\r\n\r\nAn internal system-wide uniquely identifiable circuit number.\r\n\r\n\r\n\r\nNe",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "contentType",
+                    "description": "Returns response in the specified format.  Currently supported formats include <b>json<\/b> and <b>xml<\/b>.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "e52e49b12756ddf442a761b6e057902d",
+            "rawModeData": ""
+        }
+    ]
+}
