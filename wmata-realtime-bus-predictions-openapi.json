@@ -1,0 +1,47 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "WMATA Real-Time Bus Predictions",
+        "description": "Real-time bus prediction methods.",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsapi.wmata.com\/NextBusService.svc"
+    ],
+    "paths": {
+        "\/Predictions": {
+            "get": {
+                "summary": "XML - Next Buses",
+                "description": "Description\r\n\r\nReturns next bus arrival times at a stop.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nPredictions\r\n\r\n\r\nArray containing bus predictions (NextBusPrediction).\r\n\r\n\r\n\r\n\r\nStopName\r\n\r\nFull name of the given StopID.\r\n\r\n\r\n\r\n\r\n\r\nNextBusPrediction Elements\r\n\r\n\r\n\r\n\r\n\r\nDirectionNum\r\n\r\nDenotes a binary direction (0 or 1) of the bus. There is no\r\nspecific mapping to direction, but a different value for the same\r\nroute signifies that the buses are traveling in opposite\r\ndirec",
+                "operationId": "GetPredictions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "StopID",
+                        "in": "query",
+                        "description": "7-digit regional stop ID."
+                    }
+                ]
+            }
+        },
+        "\/json\/jPredictions": {
+            "get": {
+                "summary": "JSON - Next Buses",
+                "description": "Description\r\n\r\nReturns next bus arrival times at a stop.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nPredictions\r\n\r\n\r\nArray containing bus predictions (NextBusPrediction).\r\n\r\n\r\n\r\n\r\nStopName\r\n\r\nFull name of the given StopID.\r\n\r\n\r\n\r\n\r\n\r\nNextBusPrediction Elements\r\n\r\n\r\n\r\n\r\n\r\nDirectionNum\r\n\r\nDenotes a binary direction (0 or 1) of the bus. There is no\r\nspecific mapping to direction, but a different value for the same\r\nroute signifies that the buses are traveling in opposite\r\ndirec",
+                "operationId": "GetJsonJpredictions",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "StopID",
+                        "in": "query",
+                        "description": "7-digit regional stop ID."
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
