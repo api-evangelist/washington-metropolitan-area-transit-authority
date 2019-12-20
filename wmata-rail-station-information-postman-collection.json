@@ -1,0 +1,549 @@
+{
+    "id": "eac38cbe21724e8f845c704116b7b33c",
+    "name": "WMATA Rail Station Information",
+    "description": null,
+    "auth": null,
+    "events": null,
+    "variables": [],
+    "order": [],
+    "folders_order": [],
+    "folders": [],
+    "requests": [
+        {
+            "id": "64d16d9458cbd310638621e15f26d5ea",
+            "name": "JSON - Lines",
+            "url": "httpsapi.wmata.com\/Rail.svc\/json\/jLines",
+            "description": "Description\r\n\r\nReturns information about all rail lines.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nLines\r\n\r\n\r\nArray containing line information (Line).\r\n\r\n\r\n\r\n\r\n\r\n\r\nLine Elements\r\n\r\n\r\n\r\n\r\n\r\nDisplayName\r\n\r\nFull name of line color.\r\n\r\n\r\n\r\nEndStationCode\r\n\r\nEnd station code. For example, will be E10 (Greenbelt) for the\r\nGreen Line, B11 (Glenmont) for the Red Line, etc. Use this value in\r\nother rail-related APIs to retrieve data about a station.\r\n\r\n\r\n\r\nInternalDestination1\r\n\r\nI",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "rawModeData": ""
+        },
+        {
+            "id": "3cf40f33d6f20144de021f13e7a6af97",
+            "name": "JSON - Parking Information",
+            "url": "httpsapi.wmata.com\/Rail.svc\/json\/jStationParking",
+            "description": "Description\n\nReturns parking information at a station based on a given StationCode. Omit\nthe StationCode to return parking information for all stations.\n\nIf a station has no parking, the StationsParking element will contain no\nchild elements.\n\nResponse Elements\n\n\n\n\nElement\n\nDescription\n\n\n\n\n\nStationsParking\n\n\nArray containing station parking information (StationParking).\n\n\n\n\n\n\nStationParking\nElements\n\n\n\n\n\nCode\n\nStation code. Useful when returning parking information for all\nstations. Use this val",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "StationCode",
+                    "description": "Station code.  Use the Station List method to return a list of all station codes.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "rawModeData": ""
+        },
+        {
+            "id": "a8012fb3616c0590d947866f8d206bc1",
+            "name": "JSON - Path Between Stations",
+            "url": "httpsapi.wmata.com\/Rail.svc\/json\/jPath",
+            "description": "Description\r\n\r\nReturns a set of ordered stations and distances between two stations on the\r\nsame line.\r\n\r\nNote that this method is not suitable on its own as a pathfinding solution\r\nbetween stations.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nPath\r\n\r\n\r\nArray containing path details (MetroPathItem)\r\n\r\n\r\n\r\n\r\n\r\n\r\nMetroPathItem\r\nElements\r\n\r\n\r\n\r\n\r\n\r\nDistanceToPrev\r\n\r\nDistance in feet to the previous station in the list.\r\n\r\n\r\n\r\nLineCode\r\n\r\nTwo-letter abbreviation for the line (e.g",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FromStationCode",
+                    "description": "Station code for the origin station.  Use the Station List method to return a list of all station codes.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ToStationCode",
+                    "description": "Station code for the destination station.  Use the Station List method to return a list of all station codes.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "rawModeData": ""
+        },
+        {
+            "id": "00eb492bc8337ad63636e0c21ec558b0",
+            "name": "JSON - Station Entrances",
+            "url": "httpsapi.wmata.com\/Rail.svc\/json\/jStationEntrances",
+            "description": "Description\r\n\r\nReturns a list of nearby station entrances based on latitude, longitude, and\r\nradius (meters). Omit search parameters to return all station entrances.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nEntrances\r\n\r\n\r\nArray containing detailed information about station entrances\r\n(StationEntrance).\r\n\r\n\r\n\r\n\r\n\r\n\r\nStationEntrance Elements\r\n\r\n\r\n\r\n\r\n\r\nDescription\r\n\r\nAdditional information for the entrance, if available.\r\nCurrently available data usually shows the same value",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Lat",
+                    "description": "Center point Latitude, required if Longitude and Radius are specified.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Lon",
+                    "description": "Center point Longitude, required if Latitude and Radius are specified.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Radius",
+                    "description": "Radius (meters) to include in the search area, required if Latitude and Longitude are specified.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "rawModeData": ""
+        },
+        {
+            "id": "88dabcfe9cf98add04308022772078cc",
+            "name": "JSON - Station Information",
+            "url": "httpsapi.wmata.com\/Rail.svc\/json\/jStationInfo",
+            "description": "Description\r\n\r\nReturns station location and address information based on a given\r\nStationCode.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nAddress\r\n\r\n\r\nStructure describing address information.\r\n\r\n\r\n\r\n\r\nCode\r\n\r\nStation code. Repeated from input.\r\n\r\n\r\n\r\nLat\r\n\r\nLatitude.\r\n\r\n\r\n\r\nLineCode1\r\n\r\nTwo-letter abbreviation for the line (e.g.: RD, BL, YL, OR, GR,\r\nor SV) served by this station.\r\n\r\n\r\n\r\nLineCode2\r\n\r\nAdditional line served by this station. This is often the case\r\nwhen stati",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "StationCode",
+                    "description": "Station code.  Use the Station List method to return a list of all station codes.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "rawModeData": ""
+        },
+        {
+            "id": "a0561009df377d0de02b7c98d7674a46",
+            "name": "JSON - Station List",
+            "url": "httpsapi.wmata.com\/Rail.svc\/json\/jStations",
+            "description": "Description\r\n\r\nReturns a list of station location and address information based on a given\r\nLineCode. Omit the LineCode to return all stations. The response is an array of\r\nobjects identical to those returned in the Station Information method.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nStations\r\n\r\n\r\nArray containing station information (Station).\r\n\r\n\r\n\r\n\r\n\r\n\r\nStation Elements\r\n\r\n\r\n\r\n\r\n\r\nAddress\r\n\r\n\r\nStructure describing address information.\r\n\r\n\r\n\r\n\r\nCode\r\n\r\nStation code. Rep",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LineCode",
+                    "description": "Two-letter line code abbreviation:\n\n<ul>\n<li>RD - Red<\/li>\n<li>YL - Yellow<\/li>\n<li>GR - Green<\/li>\n<li>BL - Blue<\/li>\n<li>OR - Orange<\/li>\n<li>SV - Silver<\/li>\n<\/ul>",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "rawModeData": ""
+        },
+        {
+            "id": "2d3ee3ee9e9cbd1fc9c6ec16f75bcd9e",
+            "name": "JSON - Station Timings",
+            "url": "httpsapi.wmata.com\/Rail.svc\/json\/jStationTimes",
+            "description": "Description\r\n\r\nReturns opening and scheduled first\/last train times based on a given\r\nStationCode. Omit the StationCode to return timing information for all\r\nstations.\r\n\r\nNote that for stations with multiple platforms (e.g.: Metro Center, L'Enfant\r\nPlaza, etc.), a distinct call is required for each StationCode to retrieve the\r\nfull set of train times at such stations.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nStationTimes\r\n\r\n\r\nArray containing station timing information (St",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "StationCode",
+                    "description": "Station code.  Use the Station List method to return a list of all station codes.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "rawModeData": ""
+        },
+        {
+            "id": "47d4e2bc96c086f8e711c6f049e5af12",
+            "name": "JSON - Station to Station Information",
+            "url": "httpsapi.wmata.com\/Rail.svc\/json\/jSrcStationToDstStationInfo",
+            "description": "Description\r\n\r\nReturns a distance, fare information, and estimated travel time between any\r\ntwo stations, including those on different lines. Omit both parameters to\r\nretrieve data for all stations.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nStationToStationInfos\r\n\r\n\r\nArray containing station to station information (StationToStationInfo).\r\n\r\n\r\n\r\n\r\n\r\n\r\nStationToStationInfo Elements\r\n\r\n\r\n\r\n\r\n\r\nCompositeMiles\r\n\r\nDistance in miles from the source to destination station.\r\n\r\n\r\n\r\nD",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FromStationCode",
+                    "description": "Station code for the origin station.  Use the Station List method to return a list of all station codes.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ToStationCode",
+                    "description": "Station code for the destination station.  Use the Station List method to return a list of all station codes.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "rawModeData": ""
+        },
+        {
+            "id": "c25539262d40ad76d21bac4f217ac5fa",
+            "name": "XML - Lines",
+            "url": "httpsapi.wmata.com\/Rail.svc\/Lines",
+            "description": "Description\r\n\r\nReturns information about all rail lines.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nLines\r\n\r\n\r\nArray containing line information (Line).\r\n\r\n\r\n\r\n\r\n\r\n\r\nLine Elements\r\n\r\n\r\n\r\n\r\n\r\nDisplayName\r\n\r\nFull name of line color.\r\n\r\n\r\n\r\nEndStationCode\r\n\r\nEnd station code. For example, will be E10 (Greenbelt) for the\r\nGreen Line, B11 (Glenmont) for the Red Line, etc. Use this value in\r\nother rail-related APIs to retrieve data about a station.\r\n\r\n\r\n\r\nInternalDestination1\r\n\r\nI",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "rawModeData": ""
+        },
+        {
+            "id": "4b29a494b138b5fe1d290fb371280dc9",
+            "name": "XML - Parking Information",
+            "url": "httpsapi.wmata.com\/Rail.svc\/StationParking",
+            "description": "Description\n\nReturns parking information at a station based on a given StationCode. Omit\nthe StationCode to return parking information for all stations.\n\nIf a station has no parking, the StationsParking element will contain no\nchild elements.\n\nResponse Elements\n\n\n\n\nElement\n\nDescription\n\n\n\n\n\nStationsParking\n\n\nArray containing station parking information (StationParking).\n\n\n\n\n\n\nStationParking\nElements\n\n\n\n\n\nCode\n\nStation code. Useful when returning parking information for all\nstations. Use this val",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "StationCode",
+                    "description": "Station code.  Use the Station List method to return a list of all station codes.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "rawModeData": ""
+        },
+        {
+            "id": "9f90efb9c58e1bcd2806890b1b600671",
+            "name": "XML - Path Between Stations",
+            "url": "httpsapi.wmata.com\/Rail.svc\/Path",
+            "description": "Description\r\n\r\nReturns a set of ordered stations and distances between two stations on the\r\nsame line.\r\n\r\nNote that this method is not suitable on its own as a pathfinding solution\r\nbetween stations.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nPath\r\n\r\n\r\nArray containing path details (MetroPathItem)\r\n\r\n\r\n\r\n\r\n\r\n\r\nMetroPathItem\r\nElements\r\n\r\n\r\n\r\n\r\n\r\nDistanceToPrev\r\n\r\nDistance in feet to the previous station in the list.\r\n\r\n\r\n\r\nLineCode\r\n\r\nTwo-letter abbreviation for the line (e.g",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FromStationCode",
+                    "description": "Station code for the origin station.  Use the Station List method to return a list of all station codes.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ToStationCode",
+                    "description": "Station code for the destination station.  Use the Station List method to return a list of all station codes.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "rawModeData": ""
+        },
+        {
+            "id": "b627281d9b279f2b9c09f9e6917c958a",
+            "name": "XML - Station Entrances",
+            "url": "httpsapi.wmata.com\/Rail.svc\/StationEntrances",
+            "description": "Description\r\n\r\nReturns a list of nearby station entrances based on latitude, longitude, and\r\nradius (meters). Omit search parameters to return all station entrances.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nEntrances\r\n\r\n\r\nArray containing detailed information about station entrances\r\n(StationEntrance).\r\n\r\n\r\n\r\n\r\n\r\n\r\nStationEntrance Elements\r\n\r\n\r\n\r\n\r\n\r\nDescription\r\n\r\nAdditional information for the entrance, if available.\r\nCurrently available data usually shows the same value",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "Lat",
+                    "description": "Center point Latitude, required if Longitude and Radius are specified.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Lon",
+                    "description": "Center point Longitude, required if Latitude and Radius are specified.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "Radius",
+                    "description": "Radius (meters) to include in the search area, required if Latitude and Longitude are specified.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "rawModeData": ""
+        },
+        {
+            "id": "8e2071588d41812340f72e8defb2551d",
+            "name": "XML - Station Information",
+            "url": "httpsapi.wmata.com\/Rail.svc\/StationInfo",
+            "description": "Description\r\n\r\nReturns station location and address information based on a given\r\nStationCode.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nAddress\r\n\r\n\r\nStructure describing address information.\r\n\r\n\r\n\r\n\r\nCode\r\n\r\nStation code. Repeated from input.\r\n\r\n\r\n\r\nLat\r\n\r\nLatitude.\r\n\r\n\r\n\r\nLineCode1\r\n\r\nTwo-letter abbreviation for the line (e.g.: RD, BL, YL, OR, GR,\r\nor SV) served by this station.\r\n\r\n\r\n\r\nLineCode2\r\n\r\nAdditional line served by this station. This is often the case\r\nwhen stati",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "StationCode",
+                    "description": "Station code.  Use the Station List method to return a list of all station codes.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "rawModeData": ""
+        },
+        {
+            "id": "ab525a0344389e07affe13c649f6f1a1",
+            "name": "XML - Station List",
+            "url": "httpsapi.wmata.com\/Rail.svc\/Stations",
+            "description": "Description\r\n\r\nReturns a list of station location and address information based on a given\r\nLineCode. Omit the LineCode to return all stations. The response is an array of\r\nobjects identical to those returned in the Station Information method.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nStations\r\n\r\n\r\nArray containing station information (Station).\r\n\r\n\r\n\r\n\r\n\r\n\r\nStation Elements\r\n\r\n\r\n\r\n\r\n\r\nAddress\r\n\r\n\r\nStructure describing address information.\r\n\r\n\r\n\r\n\r\nCode\r\n\r\nStation code. Rep",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "LineCode",
+                    "description": "Two-letter line code abbreviation:\n\n<ul>\n<li>RD - Red<\/li>\n<li>YL - Yellow<\/li>\n<li>GR - Green<\/li>\n<li>BL - Blue<\/li>\n<li>OR - Orange<\/li>\n<li>SV - Silver<\/li>\n<\/ul>",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "rawModeData": ""
+        },
+        {
+            "id": "e7e03b28b87f0538b311500260be7a63",
+            "name": "XML - Station Timings",
+            "url": "httpsapi.wmata.com\/Rail.svc\/StationTimes",
+            "description": "Description\r\n\r\nReturns opening and scheduled first\/last train times based on a given\r\nStationCode. Omit the StationCode to return timing information for all\r\nstations.\r\n\r\nNote that for stations with multiple platforms (e.g.: Metro Center, L'Enfant\r\nPlaza, etc.), a distinct call is required for each StationCode to retrieve the\r\nfull set of train times at such stations.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nStationTimes\r\n\r\n\r\nArray containing station timing information (St",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "StationCode",
+                    "description": "Station code.  Use the Station List method to return a list of all station codes.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "rawModeData": ""
+        },
+        {
+            "id": "05d39a37a510ff78c2969b07ce673bf1",
+            "name": "XML - Station to Station Information",
+            "url": "httpsapi.wmata.com\/Rail.svc\/SrcStationToDstStationInfo",
+            "description": "Description\r\n\r\nReturns a distance, fare information, and estimated travel time between any\r\ntwo stations, including those on different lines. Omit both parameters to\r\nretrieve data for all stations.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nStationToStationInfos\r\n\r\n\r\nArray containing station to station information (StationToStationInfo).\r\n\r\n\r\n\r\n\r\n\r\n\r\nStationToStationInfo Elements\r\n\r\n\r\n\r\n\r\n\r\nCompositeMiles\r\n\r\nDistance in miles from the source to destination station.\r\n\r\n\r\n\r\nD",
+            "data": [],
+            "dataMode": "raw",
+            "headerData": null,
+            "method": "get",
+            "pathVariableData": [],
+            "queryParams": [
+                {
+                    "key": "FromStationCode",
+                    "description": "Station code for the origin station.  Use the Station List method to return a list of all station codes.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                },
+                {
+                    "key": "ToStationCode",
+                    "description": "Station code for the destination station.  Use the Station List method to return a list of all station codes.",
+                    "value": "",
+                    "equals": true,
+                    "enabled": true
+                }
+            ],
+            "auth": null,
+            "events": null,
+            "folder": null,
+            "protocolProfileBehavior": {
+                "disableBodyPruning": true
+            },
+            "responses": [],
+            "currentHelper": null,
+            "helperAttributes": null,
+            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "rawModeData": ""
+        }
+    ]
+}
