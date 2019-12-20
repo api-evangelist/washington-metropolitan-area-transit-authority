@@ -1,0 +1,275 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "",
+        "title": "Bus Route and Stop Methods",
+        "description": "Bus stop information, route and schedule data, and bus positions.",
+        "termsOfService": ""
+    },
+    "servers": [
+        "httpsapi.wmata.com\/Bus.svc"
+    ],
+    "paths": {
+        "\/json\/jBusPositions": {
+            "get": {
+                "summary": "JSON - Bus Position",
+                "description": "Description\n\nReturns bus positions for the given route, with an optional search radius.\nIf no parameters are specified, all bus positions are returned.\n\nNote that the RouteID parameter accepts only base route names and no\nvariations, i.e.: use 10A instead of 10Av1 or 10Av2.\n\nBus positions are refreshed approximately every 20 to 30 7 to 10 seconds.\n\nResponse Elements\n\n\n\n\nElement\n\nDescription\n\n\n\n\n\nBusPositions\n\n\nArray containing bus position information (BusPositions).\n\n\n\n\n\n\nBusPosition\nElements\n\n",
+                "operationId": "5476362a281d830c946a3d68",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "RouteID",
+                        "in": "query",
+                        "description": "Base bus route, e.g.: 70, 10A."
+                    },
+                    {
+                        "name": "Lat",
+                        "in": "query",
+                        "description": "Center point Latitude, required if Longitude and Radius are specified."
+                    },
+                    {
+                        "name": "Lon",
+                        "in": "query",
+                        "description": "Center point Longitude, required if Latitude and Radius are specified."
+                    },
+                    {
+                        "name": "Radius",
+                        "in": "query",
+                        "description": "Radius (meters) to include in the search area, required if Latitude and Longitude are specified."
+                    }
+                ]
+            }
+        },
+        "\/json\/jRouteDetails": {
+            "get": {
+                "summary": "JSON - Path Details",
+                "description": "Description\r\n\r\nFor a given date, returns the set of ordered latitude\/longitude points along\r\na route variant along with the list of stops served.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nDirection0\/Direction1\r\n\r\n\r\nStructures describing path\/stop\r\ninformation.\r\n\r\nMost routes will return content in both Direction0 and\r\nDirection1 elements, though a few will return NULL for Direction0 or for Direction1.\r\n\r\n0 or 1 are binary properties. There is no specific mapping to\r\ndirecti",
+                "operationId": "5476362a281d830c946a3d69",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "RouteID",
+                        "in": "query",
+                        "description": "Base bus route, e.g.: 70, 10A."
+                    },
+                    {
+                        "name": "Date",
+                        "in": "query",
+                        "description": "Date in YYYY-MM-DD format for which to retrieve route and stop information.  Defaults to today's date unless specified."
+                    }
+                ]
+            }
+        },
+        "\/json\/jRoutes": {
+            "get": {
+                "summary": "JSON - Routes",
+                "description": "Description\r\n\r\nReturns a list of all bus route variants (patterns). For example, the 10A\r\nand 10Av1 are the same route, but may stop at slightly different locations.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nRoutes\r\n\r\n\r\nArray containing route variant information (Route).\r\n\r\n\r\n\r\n\r\n\r\n\r\nRoute Elements\r\n\r\n\r\n\r\n\r\n\r\nName\r\n\r\nDescriptive name of the route variant.\r\n\r\n\r\n\r\nRouteID\r\n\r\nUnique identifier for a given route variant. Can be used in\r\nvarious other bus-related methods.\r\n\r\n\r\n\r",
+                "operationId": "5476362a281d830c946a3d6a",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/json\/jRouteSchedule": {
+            "get": {
+                "summary": "JSON - Schedule",
+                "description": "Description\r\n\r\nReturns schedules for a given route variant for a given date.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nDirection0\/Direction1\r\n\r\n\r\nArrays containing trip information (Trip).\r\n\r\nMost routes will return content in both Direction0 and\r\nDirection1 elements, though a few (especially ones which run in\r\na loop, such as the U8) will return content only for Direction0\r\nand NULL content for Direction1.\r\n\r\n0 or 1 are binary properties. There is no specific mapping to\r\nd",
+                "operationId": "5476362a281d830c946a3d6b",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "RouteID",
+                        "in": "query",
+                        "description": "Base bus route, e.g.: 70, 10A."
+                    },
+                    {
+                        "name": "Date",
+                        "in": "query",
+                        "description": "Date in YYYY-MM-DD format for which to retrieve route and stop information.  Defaults to today's date unless specified."
+                    },
+                    {
+                        "name": "IncludingVariations",
+                        "in": "query",
+                        "description": "Whether or not to include variations if a base route is specified in RouteID.  For example, if B30 is specified and IncludingVariations is set to true, data for all variations of B30 such as B30v1, B30v2, etc. will be returned."
+                    }
+                ]
+            }
+        },
+        "\/json\/jStopSchedule": {
+            "get": {
+                "summary": "JSON - Schedule at Stop",
+                "description": "Description\r\n\r\nReturns a set of buses scheduled at a stop for a given date.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nScheduleArrivals\r\n\r\n\r\nArray containing scheduled arrival information (ScheduleArrival).\r\n\r\n\r\n\r\n\r\nStop\r\n\r\n\r\nStructure describing stop information.\r\n\r\n\r\n\r\n\r\n\r\n\r\nScheduleArrival Elements\r\n\r\n\r\n\r\n\r\n\r\nDirectionNum\r\n\r\nDenotes a binary direction (0 or 1) of the bus. There is no\r\nspecific mapping to direction, but a different value for the same\r\nroute signifies that ",
+                "operationId": "5476362a281d830c946a3d6c",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "StopID",
+                        "in": "query",
+                        "description": "7-digit regional stop ID."
+                    },
+                    {
+                        "name": "Date",
+                        "in": "query",
+                        "description": "Date in YYYY-MM-DD format for which to retrieve route and stop information.  Defaults to today's date unless specified."
+                    }
+                ]
+            }
+        },
+        "\/json\/jStops": {
+            "get": {
+                "summary": "JSON - Stop Search",
+                "description": "Description\r\n\r\nReturns a list of nearby bus stops based on latitude, longitude, and radius.\r\nOmit all parameters to retrieve a list of all stops.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nStops\r\n\r\n\r\nArray containing stop information (Stop).\r\n\r\n\r\n\r\n\r\n\r\n\r\nStop Elements\r\n\r\n\r\n\r\n\r\n\r\nLat\r\n\r\nLatitude.\r\n\r\n\r\n\r\nLon\r\n\r\nLongitude.\r\n\r\n\r\n\r\nName\r\n\r\nStop name. May be slightly different from what is spoken or\r\ndisplayed in the bus.\r\n\r\n\r\n\r\nRoutes\r\n\r\nString array of route variants which provi",
+                "operationId": "5476362a281d830c946a3d6d",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Lat",
+                        "in": "query",
+                        "description": "Center point Latitude, required if Longitude and Radius are specified."
+                    },
+                    {
+                        "name": "Lon",
+                        "in": "query",
+                        "description": "Center point Longitude, required if Latitude and Radius are specified."
+                    },
+                    {
+                        "name": "Radius",
+                        "in": "query",
+                        "description": "Radius (meters) to include in the search area, required if Latitude and Longitude are specified."
+                    }
+                ]
+            }
+        },
+        "\/BusPositions": {
+            "get": {
+                "summary": "XML - Bus Position",
+                "description": "Description\n\nReturns bus positions for the given route, with an optional search radius.\nIf no parameters are specified, all bus positions are returned.\n\nNote that the RouteID parameter accepts only base route names and no\nvariations, i.e.: use 10A instead of 10Av1 or 10Av2.\n\nBus positions are refreshed approximately every 20 to 30 7 to 10 seconds.\n\nResponse Elements\n\n\n\n\nElement\n\nDescription\n\n\n\n\n\nBusPositions\n\n\nArray containing bus position information (BusPositions).\n\n\n\n\n\n\nBusPosition\nElements\n\n",
+                "operationId": "5476362a281d830c946a3d6e",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "RouteID",
+                        "in": "query",
+                        "description": "Base bus route, e.g.: 70, 10A."
+                    },
+                    {
+                        "name": "Lat",
+                        "in": "query",
+                        "description": "Center point Latitude, required if Longitude and Radius are specified."
+                    },
+                    {
+                        "name": "Lon",
+                        "in": "query",
+                        "description": "Center point Longitude, required if Latitude and Radius are specified."
+                    },
+                    {
+                        "name": "Radius",
+                        "in": "query",
+                        "description": "Radius (meters) to include in the search area, required if Latitude and Longitude are specified."
+                    }
+                ]
+            }
+        },
+        "\/RouteDetails": {
+            "get": {
+                "summary": "XML - Path Details",
+                "description": "Description\r\nFor a given date, returns the set of ordered latitude\/longitude points along route variant along with the list of stops served.\r\nResponse Elements\r\n\r\n\r\n\r\nElement\r\nDescription\r\n\r\n\r\n\r\n\r\nDirection0\/Direction1\r\n\r\nStructures describing path\/stopinformation.\r\n\r\nMost routes will return content in both Direction0 and Direction1 elements, though a few will return NULL for Direction0 or for Direction1.\r\n\r\n0 or 1 are binary properties. There is no specific mapping to direction, but a different",
+                "operationId": "5476362a281d830c946a3d6f",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "RouteID",
+                        "in": "query",
+                        "description": "Base bus route, e.g.: 70, 10A."
+                    },
+                    {
+                        "name": "Date",
+                        "in": "query",
+                        "description": "Date in YYYY-MM-DD format for which to retrieve route and stop information.  Defaults to today's date unless specified."
+                    }
+                ]
+            }
+        },
+        "\/Routes": {
+            "get": {
+                "summary": "XML - Routes",
+                "description": "Description\r\n\r\nReturns a list of all bus route variants (patterns). For example, the 10A\r\nand 10Av1 are the same route, but may stop at slightly different locations.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nRoutes\r\n\r\n\r\nArray containing route variant information (Route).\r\n\r\n\r\n\r\n\r\n\r\n\r\nRoute Elements\r\n\r\n\r\n\r\n\r\n\r\nName\r\n\r\nDescriptive name of the route variant.\r\n\r\n\r\n\r\nRouteID\r\n\r\nUnique identifier for a given route variant. Can be used in\r\nvarious other bus-related methods.\r\n\r\n\r\n\r",
+                "operationId": "5476362a281d830c946a3d70",
+                "deprecated": 0,
+                "parameters": []
+            }
+        },
+        "\/RouteSchedule": {
+            "get": {
+                "summary": "XML - Schedule",
+                "description": "Description\r\n\r\nReturns schedules for a given route variant for a given date.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nDirection0\/Direction1\r\n\r\n\r\nArrays containing trip information (Trip).\r\n\r\nMost routes will return content in both Direction0 and\r\nDirection1 elements, though a few (especially ones which run in\r\na loop, such as the U8) will return content only for Direction0\r\nand NULL content for Direction1.\r\n\r\n0 or 1 are binary properties. There is no specific mapping to\r\nd",
+                "operationId": "5476362a281d830c946a3d71",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "RouteID",
+                        "in": "query",
+                        "description": "Base bus route, e.g.: 70, 10A."
+                    },
+                    {
+                        "name": "Date",
+                        "in": "query",
+                        "description": "Date in YYYY-MM-DD format for which to retrieve route and stop information.  Defaults to today's date unless specified."
+                    },
+                    {
+                        "name": "IncludingVariations",
+                        "in": "query",
+                        "description": "Whether or not to include variations if a base route is specified in RouteID.  For example, if B30 is specified and IncludingVariations is set to true, data for all variations of B30 such as B30v1, B30v2, etc. will be returned."
+                    }
+                ]
+            }
+        },
+        "\/StopSchedule": {
+            "get": {
+                "summary": "XML - Schedule at Stop",
+                "description": "Description\r\n\r\nReturns a set of buses scheduled at a stop for a given date.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nScheduleArrivals\r\n\r\n\r\nArray containing scheduled arrival information (ScheduleArrival).\r\n\r\n\r\n\r\n\r\nStop\r\n\r\n\r\nStructure describing stop information.\r\n\r\n\r\n\r\n\r\n\r\n\r\nScheduleArrival Elements\r\n\r\n\r\n\r\n\r\n\r\nDirectionNum\r\n\r\nDenotes a binary direction (0 or 1) of the bus. There is no\r\nspecific mapping to direction, but a different value for the same\r\nroute signifies that ",
+                "operationId": "5476362a281d830c946a3d72",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "StopID",
+                        "in": "query",
+                        "description": "7-digit regional stop ID."
+                    },
+                    {
+                        "name": "Date",
+                        "in": "query",
+                        "description": "Date in YYYY-MM-DD format for which to retrieve route and stop information.  Defaults to today's date unless specified."
+                    }
+                ]
+            }
+        },
+        "\/Stops": {
+            "get": {
+                "summary": "XML - Stop Search",
+                "description": "Description\r\n\r\nReturns a list of nearby bus stops based on latitude, longitude, and radius.\r\nOmit all parameters to retrieve a list of all stops.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nStops\r\n\r\n\r\nArray containing stop information (Stop).\r\n\r\n\r\n\r\n\r\n\r\n\r\nStop Elements\r\n\r\n\r\n\r\n\r\n\r\nLat\r\n\r\nLatitude.\r\n\r\n\r\n\r\nLon\r\n\r\nLongitude.\r\n\r\n\r\n\r\nName\r\n\r\nStop name. May be slightly different from what is spoken or\r\ndisplayed in the bus.\r\n\r\n\r\n\r\nRoutes\r\n\r\nString array of route variants which provi",
+                "operationId": "5476362a281d830c946a3d73",
+                "deprecated": 0,
+                "parameters": [
+                    {
+                        "name": "Lat",
+                        "in": "query",
+                        "description": "Center point Latitude, required if Longitude and Radius are specified."
+                    },
+                    {
+                        "name": "Lon",
+                        "in": "query",
+                        "description": "Center point Longitude, required if Latitude and Radius are specified."
+                    },
+                    {
+                        "name": "Radius",
+                        "in": "query",
+                        "description": "Radius (meters) to include in the search area, required if Latitude and Longitude are specified."
+                    }
+                ]
+            }
+        }
+    },
+    "components": {
+        "schemas": []
+    }
+}
