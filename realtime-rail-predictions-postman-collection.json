@@ -1,5 +1,5 @@
 {
-    "id": "0fa52b1b1a4ed54fb3586d7af5aa7fcc",
+    "id": "65b73766cbd0518a929821713d7b24d8",
     "name": "Real-Time Rail Predictions",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "65e6174cb4f67587ba71d2447ad36e9a",
+            "id": "343a8666adfa6610f9fb2d0164442482",
             "name": "JSON - Next Trains",
             "url": "httpsapi.wmata.com\/StationPrediction.svc\/json\/GetPrediction\/{StationCodes}",
             "description": "Description\r\n\r\nReturns next train arrival information for one or more stations. Will return\r\nan empty set of results when no predictions are available. Use All for the StationCodes parameter to return predictions for\r\nall stations.\r\n\r\nFor terminal stations (e.g.: Greenbelt, Shady Grove, etc.), predictions may\r\nbe displayed twice.\r\n\r\nSome stations have two platforms (e.g.: Gallery Place, Fort Totten, L'Enfant\r\nPlaza, and Metro Center). To retrieve complete predictions for these stations,\r\nbe sure",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0fa52b1b1a4ed54fb3586d7af5aa7fcc",
+            "collectionId": "65b73766cbd0518a929821713d7b24d8",
             "rawModeData": ""
         },
         {
-            "id": "037c4f306deb4579495a9ceac1f28e04",
+            "id": "bed3988e8f830188bd856030f975aa44",
             "name": "XML - Next Trains",
             "url": "httpsapi.wmata.com\/StationPrediction.svc\/GetPrediction\/{StationCodes}",
             "description": "Description\r\n\r\nReturns next train arrival information for one or more stations. Will return\r\nan empty set of results when no predictions are available. Use All for the StationCodes parameter to return predictions for\r\nall stations.\r\n\r\nFor terminal stations (e.g.: Greenbelt, Shady Grove, etc.), predictions may\r\nbe displayed twice.\r\n\r\nSome stations have two platforms (e.g.: Gallery Place, Fort Totten, L'Enfant\r\nPlaza, and Metro Center). To retrieve complete predictions for these stations,\r\nbe sure",
@@ -68,7 +68,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "0fa52b1b1a4ed54fb3586d7af5aa7fcc",
+            "collectionId": "65b73766cbd0518a929821713d7b24d8",
             "rawModeData": ""
         }
     ]
