@@ -1,5 +1,5 @@
 {
-    "id": "5b6bb83f69b5b4c15a7d2006cdcb1797",
+    "id": "9d49258f8b9082771353f0f8a7525cb4",
     "name": "Bus Route and Stop Methods",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "eab358dd97a39b387830c0cbb045a7fe",
+            "id": "d830b5f29bbbc9e2443c03b8d9fd1f79",
             "name": "JSON - Bus Position",
             "url": "httpsapi.wmata.com\/Bus.svc\/json\/jBusPositions",
             "description": "Description\n\nReturns bus positions for the given route, with an optional search radius.\nIf no parameters are specified, all bus positions are returned.\n\nNote that the RouteID parameter accepts only base route names and no\nvariations, i.e.: use 10A instead of 10Av1 or 10Av2.\n\nBus positions are refreshed approximately every 20 to 30 7 to 10 seconds.\n\nResponse Elements\n\n\n\n\nElement\n\nDescription\n\n\n\n\n\nBusPositions\n\n\nArray containing bus position information (BusPositions).\n\n\n\n\n\n\nBusPosition\nElements\n\n",
@@ -58,11 +58,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5b6bb83f69b5b4c15a7d2006cdcb1797",
+            "collectionId": "9d49258f8b9082771353f0f8a7525cb4",
             "rawModeData": ""
         },
         {
-            "id": "a8a085fdd010b8c2d1c16368bad9c135",
+            "id": "b9886874c7570eea68ab123d497aac6c",
             "name": "JSON - Path Details",
             "url": "httpsapi.wmata.com\/Bus.svc\/json\/jRouteDetails",
             "description": "Description\r\n\r\nFor a given date, returns the set of ordered latitude\/longitude points along\r\na route variant along with the list of stops served.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nDirection0\/Direction1\r\n\r\n\r\nStructures describing path\/stop\r\ninformation.\r\n\r\nMost routes will return content in both Direction0 and\r\nDirection1 elements, though a few will return NULL for Direction0 or for Direction1.\r\n\r\n0 or 1 are binary properties. There is no specific mapping to\r\ndirecti",
@@ -96,11 +96,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5b6bb83f69b5b4c15a7d2006cdcb1797",
+            "collectionId": "9d49258f8b9082771353f0f8a7525cb4",
             "rawModeData": ""
         },
         {
-            "id": "34b7ff307a720aac5c5c71d204373fb7",
+            "id": "7721c0d1aca7f1f8ef5661235f38b918",
             "name": "JSON - Routes",
             "url": "httpsapi.wmata.com\/Bus.svc\/json\/jRoutes",
             "description": "Description\r\n\r\nReturns a list of all bus route variants (patterns). For example, the 10A\r\nand 10Av1 are the same route, but may stop at slightly different locations.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nRoutes\r\n\r\n\r\nArray containing route variant information (Route).\r\n\r\n\r\n\r\n\r\n\r\n\r\nRoute Elements\r\n\r\n\r\n\r\n\r\n\r\nName\r\n\r\nDescriptive name of the route variant.\r\n\r\n\r\n\r\nRouteID\r\n\r\nUnique identifier for a given route variant. Can be used in\r\nvarious other bus-related methods.\r\n\r\n\r\n\r",
@@ -119,11 +119,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5b6bb83f69b5b4c15a7d2006cdcb1797",
+            "collectionId": "9d49258f8b9082771353f0f8a7525cb4",
             "rawModeData": ""
         },
         {
-            "id": "db9727428946e69b1fb91cefc3f5ef6d",
+            "id": "9125c8570efa68d5d412aa3ab6ff1b0b",
             "name": "JSON - Schedule",
             "url": "httpsapi.wmata.com\/Bus.svc\/json\/jRouteSchedule",
             "description": "Description\r\n\r\nReturns schedules for a given route variant for a given date.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nDirection0\/Direction1\r\n\r\n\r\nArrays containing trip information (Trip).\r\n\r\nMost routes will return content in both Direction0 and\r\nDirection1 elements, though a few (especially ones which run in\r\na loop, such as the U8) will return content only for Direction0\r\nand NULL content for Direction1.\r\n\r\n0 or 1 are binary properties. There is no specific mapping to\r\nd",
@@ -164,11 +164,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5b6bb83f69b5b4c15a7d2006cdcb1797",
+            "collectionId": "9d49258f8b9082771353f0f8a7525cb4",
             "rawModeData": ""
         },
         {
-            "id": "e270c3d4b71fc5a579bdc4a7628a95eb",
+            "id": "9b18bb0dc15021bdebad4fc7e66c4136",
             "name": "JSON - Schedule at Stop",
             "url": "httpsapi.wmata.com\/Bus.svc\/json\/jStopSchedule",
             "description": "Description\r\n\r\nReturns a set of buses scheduled at a stop for a given date.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nScheduleArrivals\r\n\r\n\r\nArray containing scheduled arrival information (ScheduleArrival).\r\n\r\n\r\n\r\n\r\nStop\r\n\r\n\r\nStructure describing stop information.\r\n\r\n\r\n\r\n\r\n\r\n\r\nScheduleArrival Elements\r\n\r\n\r\n\r\n\r\n\r\nDirectionNum\r\n\r\nDenotes a binary direction (0 or 1) of the bus. There is no\r\nspecific mapping to direction, but a different value for the same\r\nroute signifies that ",
@@ -202,11 +202,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5b6bb83f69b5b4c15a7d2006cdcb1797",
+            "collectionId": "9d49258f8b9082771353f0f8a7525cb4",
             "rawModeData": ""
         },
         {
-            "id": "545a70c5cbfd45939570792c236d6805",
+            "id": "7da422f83d0c2b8a75b88c2c244c2291",
             "name": "JSON - Stop Search",
             "url": "httpsapi.wmata.com\/Bus.svc\/json\/jStops",
             "description": "Description\r\n\r\nReturns a list of nearby bus stops based on latitude, longitude, and radius.\r\nOmit all parameters to retrieve a list of all stops.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nStops\r\n\r\n\r\nArray containing stop information (Stop).\r\n\r\n\r\n\r\n\r\n\r\n\r\nStop Elements\r\n\r\n\r\n\r\n\r\n\r\nLat\r\n\r\nLatitude.\r\n\r\n\r\n\r\nLon\r\n\r\nLongitude.\r\n\r\n\r\n\r\nName\r\n\r\nStop name. May be slightly different from what is spoken or\r\ndisplayed in the bus.\r\n\r\n\r\n\r\nRoutes\r\n\r\nString array of route variants which provi",
@@ -247,11 +247,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5b6bb83f69b5b4c15a7d2006cdcb1797",
+            "collectionId": "9d49258f8b9082771353f0f8a7525cb4",
             "rawModeData": ""
         },
         {
-            "id": "32061e9a4a0133bf48b35dd89de779d2",
+            "id": "34391cf5f3a832778b6f80348f835169",
             "name": "XML - Bus Position",
             "url": "httpsapi.wmata.com\/Bus.svc\/BusPositions",
             "description": "Description\n\nReturns bus positions for the given route, with an optional search radius.\nIf no parameters are specified, all bus positions are returned.\n\nNote that the RouteID parameter accepts only base route names and no\nvariations, i.e.: use 10A instead of 10Av1 or 10Av2.\n\nBus positions are refreshed approximately every 20 to 30 7 to 10 seconds.\n\nResponse Elements\n\n\n\n\nElement\n\nDescription\n\n\n\n\n\nBusPositions\n\n\nArray containing bus position information (BusPositions).\n\n\n\n\n\n\nBusPosition\nElements\n\n",
@@ -299,11 +299,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5b6bb83f69b5b4c15a7d2006cdcb1797",
+            "collectionId": "9d49258f8b9082771353f0f8a7525cb4",
             "rawModeData": ""
         },
         {
-            "id": "f1004528624e5fe028e90fdaea965237",
+            "id": "0dcf785807af04f2d8d794f18375ca89",
             "name": "XML - Path Details",
             "url": "httpsapi.wmata.com\/Bus.svc\/RouteDetails",
             "description": "Description\r\nFor a given date, returns the set of ordered latitude\/longitude points along route variant along with the list of stops served.\r\nResponse Elements\r\n\r\n\r\n\r\nElement\r\nDescription\r\n\r\n\r\n\r\n\r\nDirection0\/Direction1\r\n\r\nStructures describing path\/stopinformation.\r\n\r\nMost routes will return content in both Direction0 and Direction1 elements, though a few will return NULL for Direction0 or for Direction1.\r\n\r\n0 or 1 are binary properties. There is no specific mapping to direction, but a different",
@@ -337,11 +337,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5b6bb83f69b5b4c15a7d2006cdcb1797",
+            "collectionId": "9d49258f8b9082771353f0f8a7525cb4",
             "rawModeData": ""
         },
         {
-            "id": "258a860911990c65c79fb1b8b585d609",
+            "id": "efb447465196dd5c5fc42c7681019a2c",
             "name": "XML - Routes",
             "url": "httpsapi.wmata.com\/Bus.svc\/Routes",
             "description": "Description\r\n\r\nReturns a list of all bus route variants (patterns). For example, the 10A\r\nand 10Av1 are the same route, but may stop at slightly different locations.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nRoutes\r\n\r\n\r\nArray containing route variant information (Route).\r\n\r\n\r\n\r\n\r\n\r\n\r\nRoute Elements\r\n\r\n\r\n\r\n\r\n\r\nName\r\n\r\nDescriptive name of the route variant.\r\n\r\n\r\n\r\nRouteID\r\n\r\nUnique identifier for a given route variant. Can be used in\r\nvarious other bus-related methods.\r\n\r\n\r\n\r",
@@ -360,11 +360,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5b6bb83f69b5b4c15a7d2006cdcb1797",
+            "collectionId": "9d49258f8b9082771353f0f8a7525cb4",
             "rawModeData": ""
         },
         {
-            "id": "f4cb6b70168558e1a2c95c0ed5bb6682",
+            "id": "f05ce20a3b6d155f1500cd156b4ce2d1",
             "name": "XML - Schedule",
             "url": "httpsapi.wmata.com\/Bus.svc\/RouteSchedule",
             "description": "Description\r\n\r\nReturns schedules for a given route variant for a given date.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nDirection0\/Direction1\r\n\r\n\r\nArrays containing trip information (Trip).\r\n\r\nMost routes will return content in both Direction0 and\r\nDirection1 elements, though a few (especially ones which run in\r\na loop, such as the U8) will return content only for Direction0\r\nand NULL content for Direction1.\r\n\r\n0 or 1 are binary properties. There is no specific mapping to\r\nd",
@@ -405,11 +405,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5b6bb83f69b5b4c15a7d2006cdcb1797",
+            "collectionId": "9d49258f8b9082771353f0f8a7525cb4",
             "rawModeData": ""
         },
         {
-            "id": "daf18ebc271bedf0b026b8a7d6c2f3d9",
+            "id": "a54e2415a13a5dee6d88301d384e119f",
             "name": "XML - Schedule at Stop",
             "url": "httpsapi.wmata.com\/Bus.svc\/StopSchedule",
             "description": "Description\r\n\r\nReturns a set of buses scheduled at a stop for a given date.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nScheduleArrivals\r\n\r\n\r\nArray containing scheduled arrival information (ScheduleArrival).\r\n\r\n\r\n\r\n\r\nStop\r\n\r\n\r\nStructure describing stop information.\r\n\r\n\r\n\r\n\r\n\r\n\r\nScheduleArrival Elements\r\n\r\n\r\n\r\n\r\n\r\nDirectionNum\r\n\r\nDenotes a binary direction (0 or 1) of the bus. There is no\r\nspecific mapping to direction, but a different value for the same\r\nroute signifies that ",
@@ -443,11 +443,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5b6bb83f69b5b4c15a7d2006cdcb1797",
+            "collectionId": "9d49258f8b9082771353f0f8a7525cb4",
             "rawModeData": ""
         },
         {
-            "id": "bc50470564217d968ef4f32ae11a6abe",
+            "id": "82770eacae095901599a00dc65fc547d",
             "name": "XML - Stop Search",
             "url": "httpsapi.wmata.com\/Bus.svc\/Stops",
             "description": "Description\r\n\r\nReturns a list of nearby bus stops based on latitude, longitude, and radius.\r\nOmit all parameters to retrieve a list of all stops.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nStops\r\n\r\n\r\nArray containing stop information (Stop).\r\n\r\n\r\n\r\n\r\n\r\n\r\nStop Elements\r\n\r\n\r\n\r\n\r\n\r\nLat\r\n\r\nLatitude.\r\n\r\n\r\n\r\nLon\r\n\r\nLongitude.\r\n\r\n\r\n\r\nName\r\n\r\nStop name. May be slightly different from what is spoken or\r\ndisplayed in the bus.\r\n\r\n\r\n\r\nRoutes\r\n\r\nString array of route variants which provi",
@@ -488,7 +488,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "5b6bb83f69b5b4c15a7d2006cdcb1797",
+            "collectionId": "9d49258f8b9082771353f0f8a7525cb4",
             "rawModeData": ""
         }
     ]
