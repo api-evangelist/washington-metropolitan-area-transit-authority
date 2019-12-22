@@ -1,5 +1,5 @@
 {
-    "id": "6fa3fd127e18ac5e22331411a2497562",
+    "id": "9d3a2477a6fd5021d11de13eef47bb61",
     "name": "WMATA Real-Time Bus Predictions",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "650f8e5526e72428ca64ee52c9f5dd9d",
+            "id": "b40f61459abfb2fa7144dbe8552deba7",
             "name": "XML - Next Buses",
             "url": "httpsapi.wmata.com\/NextBusService.svc\/Predictions",
             "description": "Description\r\n\r\nReturns next bus arrival times at a stop.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nPredictions\r\n\r\n\r\nArray containing bus predictions (NextBusPrediction).\r\n\r\n\r\n\r\n\r\nStopName\r\n\r\nFull name of the given StopID.\r\n\r\n\r\n\r\n\r\n\r\nNextBusPrediction Elements\r\n\r\n\r\n\r\n\r\n\r\nDirectionNum\r\n\r\nDenotes a binary direction (0 or 1) of the bus. There is no\r\nspecific mapping to direction, but a different value for the same\r\nroute signifies that the buses are traveling in opposite\r\ndirec",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "6fa3fd127e18ac5e22331411a2497562",
+            "collectionId": "9d3a2477a6fd5021d11de13eef47bb61",
             "rawModeData": ""
         },
         {
-            "id": "32404a398e688f90b9d63527327b3210",
+            "id": "4a511c984be3db5c1c921288c258c261",
             "name": "JSON - Next Buses",
             "url": "httpsapi.wmata.com\/NextBusService.svc\/json\/jPredictions",
             "description": "Description\r\n\r\nReturns next bus arrival times at a stop.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nPredictions\r\n\r\n\r\nArray containing bus predictions (NextBusPrediction).\r\n\r\n\r\n\r\n\r\nStopName\r\n\r\nFull name of the given StopID.\r\n\r\n\r\n\r\n\r\n\r\nNextBusPrediction Elements\r\n\r\n\r\n\r\n\r\n\r\nDirectionNum\r\n\r\nDenotes a binary direction (0 or 1) of the bus. There is no\r\nspecific mapping to direction, but a different value for the same\r\nroute signifies that the buses are traveling in opposite\r\ndirec",
@@ -68,7 +68,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "6fa3fd127e18ac5e22331411a2497562",
+            "collectionId": "9d3a2477a6fd5021d11de13eef47bb61",
             "rawModeData": ""
         }
     ]
