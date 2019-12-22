@@ -1,5 +1,5 @@
 {
-    "id": "eac38cbe21724e8f845c704116b7b33c",
+    "id": "ad5ef8ba1e1fa2008c388dae69e7cf1f",
     "name": "WMATA Rail Station Information",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "64d16d9458cbd310638621e15f26d5ea",
+            "id": "c435c59e4c6577f5103148569f01cb0f",
             "name": "JSON - Lines",
             "url": "httpsapi.wmata.com\/Rail.svc\/json\/jLines",
             "description": "Description\r\n\r\nReturns information about all rail lines.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nLines\r\n\r\n\r\nArray containing line information (Line).\r\n\r\n\r\n\r\n\r\n\r\n\r\nLine Elements\r\n\r\n\r\n\r\n\r\n\r\nDisplayName\r\n\r\nFull name of line color.\r\n\r\n\r\n\r\nEndStationCode\r\n\r\nEnd station code. For example, will be E10 (Greenbelt) for the\r\nGreen Line, B11 (Glenmont) for the Red Line, etc. Use this value in\r\nother rail-related APIs to retrieve data about a station.\r\n\r\n\r\n\r\nInternalDestination1\r\n\r\nI",
@@ -29,11 +29,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "collectionId": "ad5ef8ba1e1fa2008c388dae69e7cf1f",
             "rawModeData": ""
         },
         {
-            "id": "3cf40f33d6f20144de021f13e7a6af97",
+            "id": "0f2a79a4f9d69a54a4dfefb9afeebbfa",
             "name": "JSON - Parking Information",
             "url": "httpsapi.wmata.com\/Rail.svc\/json\/jStationParking",
             "description": "Description\n\nReturns parking information at a station based on a given StationCode. Omit\nthe StationCode to return parking information for all stations.\n\nIf a station has no parking, the StationsParking element will contain no\nchild elements.\n\nResponse Elements\n\n\n\n\nElement\n\nDescription\n\n\n\n\n\nStationsParking\n\n\nArray containing station parking information (StationParking).\n\n\n\n\n\n\nStationParking\nElements\n\n\n\n\n\nCode\n\nStation code. Useful when returning parking information for all\nstations. Use this val",
@@ -60,11 +60,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "collectionId": "ad5ef8ba1e1fa2008c388dae69e7cf1f",
             "rawModeData": ""
         },
         {
-            "id": "a8012fb3616c0590d947866f8d206bc1",
+            "id": "7fde6f7eaf6edc006660004b067ed408",
             "name": "JSON - Path Between Stations",
             "url": "httpsapi.wmata.com\/Rail.svc\/json\/jPath",
             "description": "Description\r\n\r\nReturns a set of ordered stations and distances between two stations on the\r\nsame line.\r\n\r\nNote that this method is not suitable on its own as a pathfinding solution\r\nbetween stations.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nPath\r\n\r\n\r\nArray containing path details (MetroPathItem)\r\n\r\n\r\n\r\n\r\n\r\n\r\nMetroPathItem\r\nElements\r\n\r\n\r\n\r\n\r\n\r\nDistanceToPrev\r\n\r\nDistance in feet to the previous station in the list.\r\n\r\n\r\n\r\nLineCode\r\n\r\nTwo-letter abbreviation for the line (e.g",
@@ -98,11 +98,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "collectionId": "ad5ef8ba1e1fa2008c388dae69e7cf1f",
             "rawModeData": ""
         },
         {
-            "id": "00eb492bc8337ad63636e0c21ec558b0",
+            "id": "7a6f15effada9390b8665534bbd25c43",
             "name": "JSON - Station Entrances",
             "url": "httpsapi.wmata.com\/Rail.svc\/json\/jStationEntrances",
             "description": "Description\r\n\r\nReturns a list of nearby station entrances based on latitude, longitude, and\r\nradius (meters). Omit search parameters to return all station entrances.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nEntrances\r\n\r\n\r\nArray containing detailed information about station entrances\r\n(StationEntrance).\r\n\r\n\r\n\r\n\r\n\r\n\r\nStationEntrance Elements\r\n\r\n\r\n\r\n\r\n\r\nDescription\r\n\r\nAdditional information for the entrance, if available.\r\nCurrently available data usually shows the same value",
@@ -143,11 +143,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "collectionId": "ad5ef8ba1e1fa2008c388dae69e7cf1f",
             "rawModeData": ""
         },
         {
-            "id": "88dabcfe9cf98add04308022772078cc",
+            "id": "9c0fcc0cf592517c55e1c59590fc8364",
             "name": "JSON - Station Information",
             "url": "httpsapi.wmata.com\/Rail.svc\/json\/jStationInfo",
             "description": "Description\r\n\r\nReturns station location and address information based on a given\r\nStationCode.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nAddress\r\n\r\n\r\nStructure describing address information.\r\n\r\n\r\n\r\n\r\nCode\r\n\r\nStation code. Repeated from input.\r\n\r\n\r\n\r\nLat\r\n\r\nLatitude.\r\n\r\n\r\n\r\nLineCode1\r\n\r\nTwo-letter abbreviation for the line (e.g.: RD, BL, YL, OR, GR,\r\nor SV) served by this station.\r\n\r\n\r\n\r\nLineCode2\r\n\r\nAdditional line served by this station. This is often the case\r\nwhen stati",
@@ -174,11 +174,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "collectionId": "ad5ef8ba1e1fa2008c388dae69e7cf1f",
             "rawModeData": ""
         },
         {
-            "id": "a0561009df377d0de02b7c98d7674a46",
+            "id": "9ef0f92c5bb0fbc80c9134e2eeddb6b8",
             "name": "JSON - Station List",
             "url": "httpsapi.wmata.com\/Rail.svc\/json\/jStations",
             "description": "Description\r\n\r\nReturns a list of station location and address information based on a given\r\nLineCode. Omit the LineCode to return all stations. The response is an array of\r\nobjects identical to those returned in the Station Information method.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nStations\r\n\r\n\r\nArray containing station information (Station).\r\n\r\n\r\n\r\n\r\n\r\n\r\nStation Elements\r\n\r\n\r\n\r\n\r\n\r\nAddress\r\n\r\n\r\nStructure describing address information.\r\n\r\n\r\n\r\n\r\nCode\r\n\r\nStation code. Rep",
@@ -205,11 +205,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "collectionId": "ad5ef8ba1e1fa2008c388dae69e7cf1f",
             "rawModeData": ""
         },
         {
-            "id": "2d3ee3ee9e9cbd1fc9c6ec16f75bcd9e",
+            "id": "70390a54441c3901507fb7b0ac35ad69",
             "name": "JSON - Station Timings",
             "url": "httpsapi.wmata.com\/Rail.svc\/json\/jStationTimes",
             "description": "Description\r\n\r\nReturns opening and scheduled first\/last train times based on a given\r\nStationCode. Omit the StationCode to return timing information for all\r\nstations.\r\n\r\nNote that for stations with multiple platforms (e.g.: Metro Center, L'Enfant\r\nPlaza, etc.), a distinct call is required for each StationCode to retrieve the\r\nfull set of train times at such stations.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nStationTimes\r\n\r\n\r\nArray containing station timing information (St",
@@ -236,11 +236,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "collectionId": "ad5ef8ba1e1fa2008c388dae69e7cf1f",
             "rawModeData": ""
         },
         {
-            "id": "47d4e2bc96c086f8e711c6f049e5af12",
+            "id": "780c29e6e40acfe847a014b25627492a",
             "name": "JSON - Station to Station Information",
             "url": "httpsapi.wmata.com\/Rail.svc\/json\/jSrcStationToDstStationInfo",
             "description": "Description\r\n\r\nReturns a distance, fare information, and estimated travel time between any\r\ntwo stations, including those on different lines. Omit both parameters to\r\nretrieve data for all stations.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nStationToStationInfos\r\n\r\n\r\nArray containing station to station information (StationToStationInfo).\r\n\r\n\r\n\r\n\r\n\r\n\r\nStationToStationInfo Elements\r\n\r\n\r\n\r\n\r\n\r\nCompositeMiles\r\n\r\nDistance in miles from the source to destination station.\r\n\r\n\r\n\r\nD",
@@ -274,11 +274,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "collectionId": "ad5ef8ba1e1fa2008c388dae69e7cf1f",
             "rawModeData": ""
         },
         {
-            "id": "c25539262d40ad76d21bac4f217ac5fa",
+            "id": "8a004391dca6bcb0fd4c964cc63aed9e",
             "name": "XML - Lines",
             "url": "httpsapi.wmata.com\/Rail.svc\/Lines",
             "description": "Description\r\n\r\nReturns information about all rail lines.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nLines\r\n\r\n\r\nArray containing line information (Line).\r\n\r\n\r\n\r\n\r\n\r\n\r\nLine Elements\r\n\r\n\r\n\r\n\r\n\r\nDisplayName\r\n\r\nFull name of line color.\r\n\r\n\r\n\r\nEndStationCode\r\n\r\nEnd station code. For example, will be E10 (Greenbelt) for the\r\nGreen Line, B11 (Glenmont) for the Red Line, etc. Use this value in\r\nother rail-related APIs to retrieve data about a station.\r\n\r\n\r\n\r\nInternalDestination1\r\n\r\nI",
@@ -297,11 +297,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "collectionId": "ad5ef8ba1e1fa2008c388dae69e7cf1f",
             "rawModeData": ""
         },
         {
-            "id": "4b29a494b138b5fe1d290fb371280dc9",
+            "id": "4bd23512b29672481de5ed3df6e262f6",
             "name": "XML - Parking Information",
             "url": "httpsapi.wmata.com\/Rail.svc\/StationParking",
             "description": "Description\n\nReturns parking information at a station based on a given StationCode. Omit\nthe StationCode to return parking information for all stations.\n\nIf a station has no parking, the StationsParking element will contain no\nchild elements.\n\nResponse Elements\n\n\n\n\nElement\n\nDescription\n\n\n\n\n\nStationsParking\n\n\nArray containing station parking information (StationParking).\n\n\n\n\n\n\nStationParking\nElements\n\n\n\n\n\nCode\n\nStation code. Useful when returning parking information for all\nstations. Use this val",
@@ -328,11 +328,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "collectionId": "ad5ef8ba1e1fa2008c388dae69e7cf1f",
             "rawModeData": ""
         },
         {
-            "id": "9f90efb9c58e1bcd2806890b1b600671",
+            "id": "7c9134a22952239bddb77d6cd892cb81",
             "name": "XML - Path Between Stations",
             "url": "httpsapi.wmata.com\/Rail.svc\/Path",
             "description": "Description\r\n\r\nReturns a set of ordered stations and distances between two stations on the\r\nsame line.\r\n\r\nNote that this method is not suitable on its own as a pathfinding solution\r\nbetween stations.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nPath\r\n\r\n\r\nArray containing path details (MetroPathItem)\r\n\r\n\r\n\r\n\r\n\r\n\r\nMetroPathItem\r\nElements\r\n\r\n\r\n\r\n\r\n\r\nDistanceToPrev\r\n\r\nDistance in feet to the previous station in the list.\r\n\r\n\r\n\r\nLineCode\r\n\r\nTwo-letter abbreviation for the line (e.g",
@@ -366,11 +366,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "collectionId": "ad5ef8ba1e1fa2008c388dae69e7cf1f",
             "rawModeData": ""
         },
         {
-            "id": "b627281d9b279f2b9c09f9e6917c958a",
+            "id": "38e9712f48f2c75f62c4c186422cb5a5",
             "name": "XML - Station Entrances",
             "url": "httpsapi.wmata.com\/Rail.svc\/StationEntrances",
             "description": "Description\r\n\r\nReturns a list of nearby station entrances based on latitude, longitude, and\r\nradius (meters). Omit search parameters to return all station entrances.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nEntrances\r\n\r\n\r\nArray containing detailed information about station entrances\r\n(StationEntrance).\r\n\r\n\r\n\r\n\r\n\r\n\r\nStationEntrance Elements\r\n\r\n\r\n\r\n\r\n\r\nDescription\r\n\r\nAdditional information for the entrance, if available.\r\nCurrently available data usually shows the same value",
@@ -411,11 +411,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "collectionId": "ad5ef8ba1e1fa2008c388dae69e7cf1f",
             "rawModeData": ""
         },
         {
-            "id": "8e2071588d41812340f72e8defb2551d",
+            "id": "390e67b186a21c1ca939e8ba4f9aff06",
             "name": "XML - Station Information",
             "url": "httpsapi.wmata.com\/Rail.svc\/StationInfo",
             "description": "Description\r\n\r\nReturns station location and address information based on a given\r\nStationCode.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nAddress\r\n\r\n\r\nStructure describing address information.\r\n\r\n\r\n\r\n\r\nCode\r\n\r\nStation code. Repeated from input.\r\n\r\n\r\n\r\nLat\r\n\r\nLatitude.\r\n\r\n\r\n\r\nLineCode1\r\n\r\nTwo-letter abbreviation for the line (e.g.: RD, BL, YL, OR, GR,\r\nor SV) served by this station.\r\n\r\n\r\n\r\nLineCode2\r\n\r\nAdditional line served by this station. This is often the case\r\nwhen stati",
@@ -442,11 +442,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "collectionId": "ad5ef8ba1e1fa2008c388dae69e7cf1f",
             "rawModeData": ""
         },
         {
-            "id": "ab525a0344389e07affe13c649f6f1a1",
+            "id": "1db476cd74555452a7f61852974cfb69",
             "name": "XML - Station List",
             "url": "httpsapi.wmata.com\/Rail.svc\/Stations",
             "description": "Description\r\n\r\nReturns a list of station location and address information based on a given\r\nLineCode. Omit the LineCode to return all stations. The response is an array of\r\nobjects identical to those returned in the Station Information method.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nStations\r\n\r\n\r\nArray containing station information (Station).\r\n\r\n\r\n\r\n\r\n\r\n\r\nStation Elements\r\n\r\n\r\n\r\n\r\n\r\nAddress\r\n\r\n\r\nStructure describing address information.\r\n\r\n\r\n\r\n\r\nCode\r\n\r\nStation code. Rep",
@@ -473,11 +473,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "collectionId": "ad5ef8ba1e1fa2008c388dae69e7cf1f",
             "rawModeData": ""
         },
         {
-            "id": "e7e03b28b87f0538b311500260be7a63",
+            "id": "6bcaa67ea9ce6594748edaf0c48e6931",
             "name": "XML - Station Timings",
             "url": "httpsapi.wmata.com\/Rail.svc\/StationTimes",
             "description": "Description\r\n\r\nReturns opening and scheduled first\/last train times based on a given\r\nStationCode. Omit the StationCode to return timing information for all\r\nstations.\r\n\r\nNote that for stations with multiple platforms (e.g.: Metro Center, L'Enfant\r\nPlaza, etc.), a distinct call is required for each StationCode to retrieve the\r\nfull set of train times at such stations.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nStationTimes\r\n\r\n\r\nArray containing station timing information (St",
@@ -504,11 +504,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "collectionId": "ad5ef8ba1e1fa2008c388dae69e7cf1f",
             "rawModeData": ""
         },
         {
-            "id": "05d39a37a510ff78c2969b07ce673bf1",
+            "id": "4846dd2485dcca3bdb4e183314c38ec8",
             "name": "XML - Station to Station Information",
             "url": "httpsapi.wmata.com\/Rail.svc\/SrcStationToDstStationInfo",
             "description": "Description\r\n\r\nReturns a distance, fare information, and estimated travel time between any\r\ntwo stations, including those on different lines. Omit both parameters to\r\nretrieve data for all stations.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nStationToStationInfos\r\n\r\n\r\nArray containing station to station information (StationToStationInfo).\r\n\r\n\r\n\r\n\r\n\r\n\r\nStationToStationInfo Elements\r\n\r\n\r\n\r\n\r\n\r\nCompositeMiles\r\n\r\nDistance in miles from the source to destination station.\r\n\r\n\r\n\r\nD",
@@ -542,7 +542,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "eac38cbe21724e8f845c704116b7b33c",
+            "collectionId": "ad5ef8ba1e1fa2008c388dae69e7cf1f",
             "rawModeData": ""
         }
     ]
