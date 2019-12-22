@@ -7,8 +7,8 @@
         "have api",
         "have swagger"
     ],
-    "created": "2019-12-19",
-    "modified": "2019-12-19",
+    "created": "2019-12-21",
+    "modified": "2019-12-21",
     "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/washington-metropolitan-area-transit-authority\/master\/apis.json",
     "specificationVersion": "0.14",
     "apis": [
@@ -26,7 +26,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/wmata-rail-station-information-openapi.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/washington-metropolitan-area-transit-authority\/master\/wmata-rail-station-information-openapi.json"
                 }
             ]
         },
@@ -44,7 +44,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/realtime-rail-predictions-openapi.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/washington-metropolitan-area-transit-authority\/master\/realtime-rail-predictions-openapi.json"
                 }
             ]
         },
@@ -62,7 +62,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/wmata-incidents-openapi.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/washington-metropolitan-area-transit-authority\/master\/wmata-incidents-openapi.json"
                 }
             ]
         },
@@ -80,7 +80,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/train-positions-openapi.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/washington-metropolitan-area-transit-authority\/master\/train-positions-openapi.json"
                 }
             ]
         },
@@ -98,7 +98,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/rail-station-information-openapi.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/washington-metropolitan-area-transit-authority\/master\/rail-station-information-openapi.json"
                 }
             ]
         },
@@ -116,7 +116,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/incidents-openapi.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/washington-metropolitan-area-transit-authority\/master\/incidents-openapi.json"
                 }
             ]
         },
@@ -134,7 +134,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/realtime-bus-predictions-openapi.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/washington-metropolitan-area-transit-authority\/master\/realtime-bus-predictions-openapi.json"
                 }
             ]
         },
@@ -152,7 +152,7 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/bus-route-and-stop-methods-openapi.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/washington-metropolitan-area-transit-authority\/master\/bus-route-and-stop-methods-openapi.json"
                 }
             ]
         },
@@ -170,13 +170,17 @@
                 },
                 {
                     "type": "x-openapi",
-                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/wmata-realtime-bus-predictions-openapi.json"
+                    "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/washington-metropolitan-area-transit-authority\/master\/wmata-realtime-bus-predictions-openapi.json"
                 }
             ]
         }
     ],
     "include": [],
     "x-common": [
+        {
+            "type": "APIs.json",
+            "url": "https:\/\/raw.githubusercontent.com\/api-evangelist\/1forge\/master\/apis.json"
+        },
         {
             "type": "Base",
             "url": "http:\/\/api.wmata.com\/"
