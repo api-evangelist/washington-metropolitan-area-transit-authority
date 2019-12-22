@@ -1,5 +1,5 @@
 {
-    "id": "f0b141edb5002929c4cc1c7e50cf9345",
+    "id": "72b3673edd0cd77df929cd8f42c5d14a",
     "name": "WMATA Incidents",
     "description": null,
     "auth": null,
@@ -10,7 +10,7 @@
     "folders": [],
     "requests": [
         {
-            "id": "95549b2ac88a11e17d2fa1b9e9cc9b2b",
+            "id": "b70df3fb18823b1112cc86a2a96b59d1",
             "name": "JSON - Bus Incidents",
             "url": "httpsapi.wmata.com\/Incidents.svc\/json\/BusIncidents",
             "description": "Description\r\n\r\nReturns a set of reported bus incidents\/delays for a given Route. Omit the\r\nRoute to return all reported items.\r\n\r\nNote that the Route parameter accepts only base route names and no\r\nvariations, i.e.: use 10A instead of 10Av1 and 10Av2.\r\n\r\nBus incidents\/delays are refreshed once every 20 to 30 seconds approximately.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nBusIncidents\r\n\r\n\r\nArray containing bus incident information (BusIncident).\r\n\r\n\r\n\r\n\r\n\r\n\r\nBusIncident\r\nEl",
@@ -37,11 +37,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f0b141edb5002929c4cc1c7e50cf9345",
+            "collectionId": "72b3673edd0cd77df929cd8f42c5d14a",
             "rawModeData": ""
         },
         {
-            "id": "8f382d212ee109253571c5ed53164f5f",
+            "id": "aefd133e2ca1f8a45d83be1dfb19b136",
             "name": "JSON - Elevator\/Escalator Outages",
             "url": "httpsapi.wmata.com\/Incidents.svc\/json\/ElevatorIncidents",
             "description": "Description\r\n\r\nReturns a list of reported elevator and escalator outages at a\r\ngiven station. Omit the StationCode parameter to return all reported\r\noutages.\r\n\r\nNote that for stations with multiple platforms and therefore StationCodes\r\n(e.g.: Metro Center, L'Enfant Plaza, etc.), a distinct call is required for\r\neach StationCode.\r\n\r\nElevator and escalator outages are refreshed once every 20 to 30 seconds approximately.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nElevatorIncide",
@@ -68,11 +68,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f0b141edb5002929c4cc1c7e50cf9345",
+            "collectionId": "72b3673edd0cd77df929cd8f42c5d14a",
             "rawModeData": ""
         },
         {
-            "id": "c989ef12c94407511d383796bbe41469",
+            "id": "d38e9597a4e981438e253394214f3fa1",
             "name": "JSON - Rail Incidents",
             "url": "httpsapi.wmata.com\/Incidents.svc\/json\/Incidents",
             "description": "Description\r\n\r\nReturns reported rail incidents (significant disruptions and delays to\r\nnormal service). The data is identical to WMATA's Metrorail Service Status\r\nfeed.\r\n\r\nRail incidents are refreshed once every 20 to 30 seconds approximately.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nIncidents\r\n\r\n\r\nArray containing rail disruption information (Incident).\r\n\r\n\r\n\r\n\r\n\r\n\r\nIncident Elements\r\n\r\n\r\n\r\n\r\n\r\nDateUpdated\r\n\r\nDate and time (Eastern Standard Time) of last update. Will be\r\n",
@@ -91,11 +91,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f0b141edb5002929c4cc1c7e50cf9345",
+            "collectionId": "72b3673edd0cd77df929cd8f42c5d14a",
             "rawModeData": ""
         },
         {
-            "id": "edaaf62f68e18c5cf3eb9b4eb0f092db",
+            "id": "0fb220bb13c08384be894bf9feb6abbc",
             "name": "XML - Bus Incidents",
             "url": "httpsapi.wmata.com\/Incidents.svc\/BusIncidents",
             "description": "Description\r\n\r\nReturns a set of reported bus incidents\/delays for a given Route. Omit the\r\nRoute to return all reported items.\r\n\r\nNote that the Route parameter accepts only base route names and no\r\nvariations, i.e.: use 10A instead of 10Av1 and 10Av2.\r\n\r\nBus incidents\/delays are refreshed once every 20 to 30 seconds approximately.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nBusIncidents\r\n\r\n\r\nArray containing bus incident information (BusIncident).\r\n\r\n\r\n\r\n\r\n\r\n\r\nBusIncident\r\nEl",
@@ -122,11 +122,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f0b141edb5002929c4cc1c7e50cf9345",
+            "collectionId": "72b3673edd0cd77df929cd8f42c5d14a",
             "rawModeData": ""
         },
         {
-            "id": "4d48a3248ecc0054fd4c819dd5bdabd3",
+            "id": "d58026d984bdf4f3b983ba81e1c51ddb",
             "name": "XML - Elevator\/Escalator Outages",
             "url": "httpsapi.wmata.com\/Incidents.svc\/ElevatorIncidents",
             "description": "Description\r\n\r\nReturns a list of reported elevator and escalator outages at a\r\ngiven station. Omit the StationCode parameter to return all reported\r\noutages.\r\n\r\nNote that for stations with multiple platforms and therefore StationCodes\r\n(e.g.: Metro Center, L'Enfant Plaza, etc.), a distinct call is required for\r\neach StationCode.\r\n\r\nElevator and escalator outages are refreshed once every 20 to 30 seconds approximately.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nElevatorIncide",
@@ -153,11 +153,11 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f0b141edb5002929c4cc1c7e50cf9345",
+            "collectionId": "72b3673edd0cd77df929cd8f42c5d14a",
             "rawModeData": ""
         },
         {
-            "id": "2ca124331ac95e16fc6fcc705c680711",
+            "id": "250541205699441b882eae6bce231075",
             "name": "XML - Rail Incidents",
             "url": "httpsapi.wmata.com\/Incidents.svc\/Incidents",
             "description": "Description\r\n\r\nReturns reported rail incidents (significant disruptions and delays to\r\nnormal service). The data is identical to WMATA's Metrorail Service Status\r\nfeed.\r\n\r\nRail incidents are refreshed once every 20 to 30 seconds approximately.\r\n\r\nResponse Elements\r\n\r\n\r\n\r\n\r\nElement\r\n\r\nDescription\r\n\r\n\r\n\r\n\r\n\r\nIncidents\r\n\r\n\r\nArray containing rail disruption information (Incident).\r\n\r\n\r\n\r\n\r\n\r\n\r\nIncident Elements\r\n\r\n\r\n\r\n\r\n\r\nDateUpdated\r\n\r\nDate and time (Eastern Standard Time) of last update. Will be\r\n",
@@ -176,7 +176,7 @@
             "responses": [],
             "currentHelper": null,
             "helperAttributes": null,
-            "collectionId": "f0b141edb5002929c4cc1c7e50cf9345",
+            "collectionId": "72b3673edd0cd77df929cd8f42c5d14a",
             "rawModeData": ""
         }
     ]
